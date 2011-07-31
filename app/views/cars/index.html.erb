@@ -1,0 +1,22 @@
+<p>Choose your car</p>
+<% if @cars.nil? %>
+<p>-</p>
+<% else %>
+  <table>
+        <%= render :partial => 'cars/car', :collection => @cars %>
+  </table>
+<% end %>
+<p>Add a new car</p>
+<%= form_for Car.new, :as => :car, :url => { :controller => "cars", :action => "create" } do |f| %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name, :size => 20 %>
+  </div>
+  <div class="field">
+    <%= f.label :tank_size %>
+    <%= f.text_field :tank_size, :size => 5 %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Submit" %>
+  </div>
+<% end %>
