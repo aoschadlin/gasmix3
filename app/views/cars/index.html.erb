@@ -1,4 +1,4 @@
-<p>Choose your car</p>
+<p><h3>Choose your car</h3></p>
 <% if @cars.nil? %>
 <p>-</p>
 <% else %>
@@ -6,7 +6,7 @@
         <%= render :partial => 'cars/car', :collection => @cars %>
   </table>
 <% end %>
-<p>Add a new car</p>
+<p><h3>Add a new car</h3></p>
 <%= form_for Car.new, :as => :car, :url => { :controller => "cars", :action => "create" } do |f| %>
   <div class="field">
     <%= f.label :name %>

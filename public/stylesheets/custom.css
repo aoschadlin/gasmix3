@@ -3,12 +3,18 @@
 }
 
 body {
-  background: #cff;
+  background: #DFDFDF;
 }
 
 header {
   padding-top: 20px;
   padding-bottom: 10px;
+}
+
+.headertext {
+  font-size: 250%;
+  text-align: left;
+  margin-bottom: 0px;
 }
 
 header img {
@@ -17,7 +23,6 @@ header img {
 }
 
 section {
-  margin-top: 1em;
   font-size: 120%;
   padding: 20px;
   background: #fff;

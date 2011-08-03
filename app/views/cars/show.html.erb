@@ -1,4 +1,4 @@
-<h1 class="car">Gas Mix calculator</h1>
+<h3>Enter details for your fillup</h3>
 <%= form_for @car, :url => { :action => "result", :controller => "results" } do |c| %>
 <%= hidden_field_tag :id, @car.id %>
   <div class="header">
@@ -10,19 +10,19 @@
     <%= c.text_field :tank_size, :size => 5 %>
   </div>
   <div class="field">
-    <%= c.label :existing_amount %>
+    <%= c.label :existing_amount, "Existing amount in tank" %>
     <%= c.text_field :existing_amount, :size => 5 %>
   </div>
   <div class="field">
-    <%= c.label :existing_octane %>
+    <%= c.label :existing_octane, "Existing octane in tank" %>
     <%= c.text_field :existing_octane, :size => 5, :value => @car.last_target_octane %>
   </div>
   <div class="field">
-    <%= c.label :base_octane %>
+    <%= c.label :base_octane, "Pump base octane" %>
     <%= c.text_field :base_octane, :size => 5, :value => @car.last_base_octane %>
   </div>
   <div class="field">
-    <%= c.label :boost_octane %>
+    <%= c.label :boost_octane, "Pump boost octane (race gas)" %>
     <%= c.text_field :boost_octane, :size => 5, :value => @car.last_boost_octane %>
   </div>
   <div class="field">

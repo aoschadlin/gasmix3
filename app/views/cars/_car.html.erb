@@ -2,6 +2,7 @@
   <td class="car">
   <span class="content"><%= link_to car.name, [current_user, car] %></span>
   </td>
+  <td>&nbsp;</td>
   <td>
     <%= link_to "delete", [current_user, car], :method => :delete, :confirmation => "You sure?", :title => car.name %>
   </td>
